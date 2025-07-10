@@ -1,6 +1,6 @@
 +++
 title = "Video Guides"
-weight = 12
+weight = 17
 +++
 
 ## AgOpenGPS - download, configuration and setup
