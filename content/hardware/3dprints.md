@@ -1,6 +1,6 @@
 +++
 title = "3D prints and designs"
-weight = 11
+weight = 18
 +++
 
 ## Here's a list of some cool 3D prints you might find useful
