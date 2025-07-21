@@ -95,7 +95,7 @@ Before you dive into part lists, here's what each main component does.
 - **Control PCB** – Acts as a central point that routes power and signals,
   connects sensors, and drives the motor or valve. First-time users would
   typically go for the latest
-  ['all-in-one' board - currently v4.5](/hardware/boards/All-In-One-AIO-boards)
+  ['all-in-one' board - currently v4.5](/hardware/boards/all-in-one-boards)
 - **RTK correction signal** _(optional but recommended)_ – AgOpenGPS's built-in
   NTRIP client can fetch RTCM data from public, commercial, or DIY base stations
   to reach 1–2 cm accuracy.
