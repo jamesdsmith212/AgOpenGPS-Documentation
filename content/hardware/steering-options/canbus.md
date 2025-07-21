@@ -136,3 +136,60 @@ Make sure that:
 
 If you want to learn how to sniff the CANBUS and find out joystick codes etc,
 watch this: https://youtu.be/O01Fy4dBw6s
+
+## CANBUS Glossary
+
+All definitions in this glossary were LLM generated. Use with caution.
+
+- **CANBUS (Controller Area Network Bus):** A robust vehicle bus standard
+  designed to allow microcontrollers and devices to communicate with each other
+  without a host computer, commonly used in automotive and agricultural
+  machinery.
+- **Transceiver:** An electronic device that both transmits and receives analog
+  or digital signals, required for CANBUS communication.
+- **MCP2562T-E/SN:** A specific CANBUS transceiver IC (integrated circuit) used
+  to interface microcontrollers with the CANBUS.
+- **CAN Controller:** A device or chip that manages CANBUS communication,
+  handling the sending and receiving of CAN messages.
+- **ISOBUS:** An international standard (ISO 11783) for communication between
+  tractors and implements, based on CANBUS.
+- **NMEA2000:** A communication standard used in marine electronics, also based
+  on CANBUS.
+- **V-Bus (Valve Bus):** A specific CANBUS network dedicated to communicating
+  with hydraulic or steering valves.
+- **Arduino IDE:** An open-source development environment used for programming
+  microcontrollers like the Teensy.
+- **Service Menu (over Serial):** A configuration interface accessed via serial
+  communication (USB/COM port) to set up hardware parameters.
+- **Panda Mode:** A specific CANBUS communication mode or protocol setting,
+  often referring to a baud rate of 460k.
+- **Pinout:** The arrangement or mapping of pins on a connector or device,
+  showing their functions.
+- **CAN Sniffer:** A tool or device used to monitor and analyze CANBUS traffic,
+  useful for reverse engineering or troubleshooting.
+- **Sourcecode (CAN_ALL_Brands):** The program code used to support multiple
+  tractor brands in CANBUS communication.
+- **Message Header:** The identifier part of a CANBUS message, used to
+  distinguish between different types of data.
+- **DT Connector:** A type of rugged, multi-pin electrical connector commonly
+  used in automotive and agricultural equipment.
+- **CAN Terminator:** A resistor placed at the end of a CANBUS network to
+  prevent signal reflections and ensure reliable communication.
+- **Quicksteer / SpeedSteer:** Factory or aftermarket systems that allow for
+  faster or easier steering, sometimes requiring special handling in CANBUS
+  setups.
+- **PVED Valve:** A type of electrohydraulic valve used for steering control,
+  often configurable via CANBUS.
+- **Engage Message/Button:** A CANBUS message or physical button used to
+  activate the steering system.
+- **Hydraulic Lockout:** A safety feature that disables hydraulic functions,
+  including steering, under certain conditions.
+- **Road Lockout:** A feature that prevents automatic steering when the vehicle
+  is on the road for safety reasons.
+- **Serial Service Tool:** Software or interface used to configure hardware via
+  serial communication.
+- **Bus:** In electronics and computing, a bus is a communication system that
+  transfers data between components inside a computer or between computers. In
+  the context of CANBUS, it refers to the network or wiring system that allows
+  multiple devices (controllers, sensors, actuators) to communicate with each
+  other over shared signal lines.
