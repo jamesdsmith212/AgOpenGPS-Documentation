@@ -20,6 +20,14 @@ jobs:
           hugo-version: latest
           extended: true
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install PostCSS CLI and autoprefixer
+        run: npm install --no-save postcss postcss-cli autoprefixer
+
       - name: Build site
         run: hugo --minify --baseURL "https://docs.agopengps.com/"
 
