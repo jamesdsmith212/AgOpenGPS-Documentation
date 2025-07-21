@@ -1,0 +1,9 @@
+# Ignore localhost and loopback addresses
+^https?://localhost
+^https?://127\.0\.0\.1
+
+# Ignore mailto: links (email addresses)
+^mailto:
+
+# Ignore example.com (placeholder domain)
+^https?://example\.com

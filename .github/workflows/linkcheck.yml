@@ -1,0 +1,32 @@
+name: Link Check
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches: [main]
+
+jobs:
+  linkcheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: latest
+          extended: true
+
+      - name: Build site
+        run: hugo --minify --baseURL "https://docs.agopengps.com/"
+
+      - name: Run Lychee (offline)
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >
+            --offline --root-dir "${{ github.workspace }}/public"
+            public/**/*.html
+          fail: true
