@@ -5,71 +5,64 @@ weight = 7
 description = "Guide for installing and using the Keya motorized steering wheel. Includes ordering information, wiring diagrams, adapter types, and links to templates and firmware for integration with AgOpenGPS."
 +++
 
-You can use this as a guide for installation:
-https://discourse.agopengps.com/t/keya-canbus-motor-great-success-many-happy-etc/14174
+## Overview
 
-https://youtu.be/ANboPyvSWBE
+The Keya motor is a motorised steering wheel made and sold by Jinyan Keya. The
+motor is one of the easiest ways to set up AgOpenGPS, and the result is a
+relatively tidy system with great performance.
 
-To order, the official link for the latest version of the steering wheel -
-direct from Keya themselves - is
-[here](https://www.aliexpress.com/item/1005008796635857.html). PLEASE NOTE:
-there are imitators on AliExpress selling Keya-lookalike motors. The link here
-is to their official shop. Please support Keya as they are known to work well,
-and we have great support from the manufacturer. Other motors are not always
-known to work correctly, and Keya cannot support them if you come to the channel
-asking for help.
+You can see what the Keya looks like in action in this
+[AgOpenGPS Keya Demonstration Video](https://youtu.be/ANboPyvSWBE)
 
-Keya reference manual:
-[Keya KY170DD01005-08G v2.4.pdf](https://github.com/AgOpenGPS-Official/Boards/files/15389407/Keya.KY170DD01005-08G.v2.4.pdf)
+## Model selection
 
-If you're in Europe you might want to check
-[navisklep.pl](https://navisklep.pl/p/silnik-kierownica-keya/) They'll supply
-with the 3 spoked wheel.
+### Motor types
 
-## Links
+![image](../../img/keya-auto-steer-motor-types.png)
 
-### [The full kit, gen4 motor, deutsch connector](https://www.aliexpress.com/item/1005008796635857.html) <<<< this is what you want
+### Spline Adapters
 
-![image](../../img/keya.png)
+Your machine will need an adapter to join the keya motor onto a splined steering
+column. The table below can be used as a initial guide, but may be outdated. You
+should **ALWAYS** measure the diameter and count the splines yourself. This is
+for reference only.
 
-The full kit (older, round connector:
-https://www.aliexpress.com/item/1005006800593966.html)
+| Type | Tractor                                                                                                          |
+| ---- | ---------------------------------------------------------------------------------------------------------------- |
+| A    | Case 5150<br>Case Puma 160<br>Deutz Agrofarm<br>John Deere 7x30, 6x30, 6300, 8300<br>Landini 6-115H<br>NH T5.120 |
+| A+   | NH TS125a                                                                                                        |
+| B    |                                                                                                                  |
+| D    | Deutz 5110 TTV<br>Fendt 718 SCR, Favorit 511C                                                                    |
+| F    | Bateman, Sands, Knight sprayers                                                                                  |
+| K    |                                                                                                                  |
+| N    | Case MX110<br>Claas Axion<br>Fendt 936<br>Massey Ferguson 5413<br>Case Magnum 310 2013                           |
+| NH40 | NH T5050                                                                                                         |
+| T    | Kubota B3400                                                                                                     |
+| W    |                                                                                                                  |
 
-### Additional parts
+## Configuration
 
-Just a steering wheel, no motor:
-https://www.aliexpress.com/item/1005006723020417.html
+You’ll need a modified Teensy firmware to work with the Keya Motor. A few users
+have developed some 'in-testing' firmware which you can use in your own builds
+at your own risk, such as
+[Iansalot's Modified firmware for the teensy](https://github.com/lansalot/AgOpenGPS_Boards/blob/Keya/TeensyModules/V4.1/Firmware/AOG-Keya-CANBUS.hex).
 
-Adapter type A: https://www.aliexpress.com/item/1005006590788935.html
+The easiest route to get the right firmware installed on the Teensy is
+[AOGConfigOMatic](https://github.com/lansalot/AOGConfigOMatic/releases). More
+info on this process can be found on the
+[Configuring the Teensy](/hardware/boards/configuring-boards/Configuring-The-Teensy)
+page.
 
-Adapter type D: https://www.aliexpress.com/item/1005006590913968.html
+## Installation
 
-Adapter type F: https://www.aliexpress.com/item/1005006591675066.html
-
-Adapter type N: https://www.aliexpress.com/item/1005006591480010.html
-
-Adapter type NH40: https://www.aliexpress.com/item/1005006591353337.html
-
-You need to specify when ordering which steering boss you require (and let them
-know if you require additional ones). Pay attention to the aliexpress link, the
-"View more" bit will list all the adapter types. NOTE: this list below might be
-out of date as more models are added, so look for this chart on the aliexpress
-link!!
-
-![image](../../img/aliexpress-view-more.png)
-
-![image](../../img/keya-adapter-list.png)
-
-![image](../../img/keyatemplate.png)
+You can use this
+[discourse thread on keya installs](https://discourse.agopengps.com/t/keya-canbus-motor-great-success-many-happy-etc/14174)
+as a guide for installation:
 
 Download this [Keya template](../../files/KeyaTemplate.pdf), to help with
 marking out for brackets or this template for the new 1.4 motor.
 
-Replacement connectors: https://www.aliexpress.com/item/1005002498869200.html
-
-![image](../../img/keya-replacement-connector.png)
-
-Connections:
+### Wiring
 
 ![image](../../img/keya-connector.png)
 
@@ -86,38 +79,67 @@ instead:
 
 ![image](../../img/keya8pindeutsch.png)
 
-You’ll need a modified firmware and while the hope is that this eventually goes
-to mainstream, at the moment it’s still considered as in-testing, so I haven’t
-submitted a PR to the main branch as yet.
+## Operation
 
-You can find my modified firmware
-[here](https://github.com/lansalot/AgOpenGPS_Boards/blob/Keya/TeensyModules/V4.1/Firmware/AOG-Keya-CANBUS.hex)
-but make life easier by using
-[AOG-Config-O-Matic!](https://github.com/lansalot/AOGConfigOMatic/releases)
+Keya reference manual:
+[Keya KY170DD01005-08G v2.4.pdf](https://github.com/AgOpenGPS-Official/Boards/files/15389407/Keya.KY170DD01005-08G.v2.4.pdf)
 
-# Motor types
+## Misc Links
 
-![image](../../img/keya-auto-steer-motor-types.png)
+The full kit (with older, round connector):
+https://www.aliexpress.com/item/1005006800593966.html)
 
-# Cables
+Just a steering wheel, no motor:
+https://www.aliexpress.com/item/1005006723020417.html
+
+Replacement connectors: https://www.aliexpress.com/item/1005002498869200.html
+
+![image](../../img/keya-replacement-connector.png)
+
+### Cables
 
 7-pin https://www.aliexpress.com/item/1005007135464376.html
 
 12-pin https://www.aliexpress.com/item/1005007144678100.html
 
-# Known fittings
+## Sample Suppliers
 
-## Note - you should ALWAYS measure the diameter and count the splines yourself. This is for reference only.
+To order, the official link for the latest version (V4) of the steering wheel -
+direct from Keya themselves - is here
+[Keya V4 Motor Kit](https://www.aliexpress.com/item/1005008796635857.html).
 
-| Type | Tractor                                                                                                          |
-| ---- | ---------------------------------------------------------------------------------------------------------------- |
-| A    | Case 5150<br>Case Puma 160<br>Deutz Agrofarm<br>John Deere 7x30, 6x30, 6300, 8300<br>Landini 6-115H<br>NH T5.120 |
-| A+   | NH TS125a                                                                                                        |
-| B    |                                                                                                                  |
-| D    | Deutz 5110 TTV<br>Fendt 718 SCR, Favorit 511C                                                                    |
-| F    | Bateman, Sands, Knight sprayers                                                                                  |
-| K    |                                                                                                                  |
-| N    | Case MX110<br>Claas Axion<br>Fendt 936<br>Massey Ferguson 5413<br>Case Magnum 310 2013                           |
-| NH40 | NH T5050                                                                                                         |
-| T    | Kubota B3400                                                                                                     |
-| W    |                                                                                                                  |
+You need to specify when ordering which steering boss you require (and let them
+know if you require additional ones). Pay attention to the aliexpress link, the
+"View more" bit will list all the adapter types. NOTE: this list below might be
+out of date as more models are added, so look for this chart on the aliexpress
+link!!
+
+![image](../../img/aliexpress-view-more.png)
+
+![image](../../img/keya-adapter-list.png)
+
+![image](../../img/keyatemplate.png)
+
+### Adapter links
+
+Adapter type A: https://www.aliexpress.com/item/1005006590788935.html
+
+Adapter type D: https://www.aliexpress.com/item/1005006590913968.html
+
+Adapter type F: https://www.aliexpress.com/item/1005006591675066.html
+
+Adapter type N: https://www.aliexpress.com/item/1005006591480010.html
+
+Adapter type NH40: https://www.aliexpress.com/item/1005006591353337.html
+
+![image](../../img/keya.png)
+
+PLEASE NOTE: there are imitators on AliExpress selling Keya-lookalike motors.
+The link above is to their official shop. Please support Keya as they are known
+to work well, and we have great support from the manufacturer. Other motors are
+not always known to work correctly, and Keya cannot support them if you come to
+the channel asking for help.
+
+If you're in Europe you might want to check
+[navisklep.pl](https://navisklep.pl/p/silnik-kierownica-keya/) They'll supply
+with the 3 spoked wheel.
