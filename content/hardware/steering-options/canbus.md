@@ -5,6 +5,10 @@ weight = 10
 description = "Comprehensive guide to steering via CANBUS. Explains how to interface with tractor CAN systems, required hardware, configuration steps, and specific notes for various tractor brands."
 +++
 
+## Overview
+
+## Introduction to canbus
+
 CommonRail has written a superb guide on how to investigate the CANbus on your
 system - give it a good read!
 
@@ -24,25 +28,19 @@ These are absolutely tiny and you'll be soldering them on here most likely:
 
 ![image](../../img/canbus-receivers-pcb.png)
 
-# The PCB of Tony
+## The PCB of Tony
 
 CommonRail has an excellent resource including the code you need
 [here](https://github.com/MechanicTony/AOG_CAN_Teensy4.1) on how to learn about
-CANBUS, and control your machine with it. CAN controllers on Tonys board as per:
+CANBUS, and control your machine with it.
 
-### CAN1
+CAN controllers on Tonys board as per:
 
-Tractor BUS / armrest when the Engage message (button) is one a different bus
-from the valve.
-
-### CAN2
-
-ISOBUS (not really in use) we can put NMEA2000 position on the bus
-
-### CAN3
-
-V-Bus or Valve Bus this is where we communicate with the valve. (Read the angle,
-send the desired angle)
+- CAN1: Tractor BUS / armrest when the Engage message (button) is one a
+  different bus from the valve.
+- CAN2: ISOBUS (not really in use) we can put NMEA2000 position on the bus
+- CAN3: V-Bus or Valve Bus this is where we communicate with the valve. (Read
+  the angle, send the desired angle)
 
 ### Post assembly steps
 
@@ -51,13 +49,15 @@ do the necessary configuration via the Service menu over Serial.
 Usually we set P for Panda mode at 460k (just like the AIO board)  
 Select the brand we should emulate.
 
-# Machines
+## Tractor Brand Specifics
 
-## Generic CAN connector pinout:
+### Generic CAN connector
+
+Pinout is as follows:
 
 ![image](../../img/can-connector-pinout.png)
 
-## Case / New Holland
+### Case / New Holland
 
 Activate the necessary in the [HH menu](../../files/NH_H3_Config.pdf) There's
 also a CH3 which MUST be NO else you'll have errors.
@@ -70,25 +70,29 @@ don't care about their content just the message header. For example:
 
 > 0x0CACAA08, EXT); //CaseIH Curve Data & Valve State Message
 
-## Massey Ferguson - steer bus location:
+### Massey Ferguson
+
+Massey steer bus location:
 
 ![image](../../img/can-massey-ferguson.png) (There's also a black DT 3P
 connector with a CAN terminator on some models.)
 
-## Fendt (V-Bus is for steering):
+### Fendt
+
+V-Bus is for steering:
 
 ![image](../../img/can-fendt.png)
 
 ![image](../../img/can-fendt2.png)
 
-## Tracked Challengers
+### Tracked Challengers
 
 Here the WAS can't be sniffed. There's a 4pin DT connector behind the right
 cover where you want to attach yourself. There's no engage button by default so
 wire one for the CAN board. Put it gear, let it drive slow, move the steering a
 bit then engage from the tablet.
 
-## Claas
+### Claas
 
 This can only be steered if we break the factory quicksteer.  
 You'll have to modify the wiring harness. The necessary connectors can't be
@@ -104,13 +108,13 @@ We'll steal the 2 CAN circuits (Tractor -> CAN1 , Steer -> CAN3) + 12V from the
 Using the Serial Service tool of Teensy we need to modify the PVED valve
 settings.
 
-## Valtra
+### Valtra
 
 It has a button to engage but it never worked. Easier to add your own button.
 Otherwise it's the same deal: Find the pins with the right can message. Add your
 controller and off you go.
 
-# How to engage steering?
+## How to engage steering
 
 Make sure that:
 
@@ -128,7 +132,7 @@ Make sure that:
   engage from the tablet. (We'll worry about the presence of the pyhsical button
   later.)
 
-# Other links
+## Other links
 
 If you want to learn how to sniff the CANBUS and find out joystick codes etc,
 watch this: https://youtu.be/O01Fy4dBw6s
