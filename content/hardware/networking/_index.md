@@ -3,7 +3,7 @@ title = "Networking"
 weight = 9
 +++
 
-#### Message formats
+## Message formats
 
 PGNs are described here:
 https://github.com/AgOpenGPS-Official/Boards/blob/main/PGN.md
