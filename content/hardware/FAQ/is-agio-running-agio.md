@@ -1,7 +1,6 @@
 +++
 title = "Is AGIO running? AgIO?"
 weight = 2
-toc_hide = true
 +++
 
 If you get this message:

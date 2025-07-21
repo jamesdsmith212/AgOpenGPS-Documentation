@@ -1,7 +1,6 @@
 +++
 title = "Serial/COM ports"
 weight = 5
-toc_hide = true
 +++
 
 Serial (aka "COM") ports are an old and simple way of having two pieces of

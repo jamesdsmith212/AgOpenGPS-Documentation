@@ -1,7 +1,6 @@
 +++
 title = "Help! I need to speak to someone!"
 weight = 1
-toc_hide = true
 +++
 
 Before you look for help either on Discourse, please check this wiki itself, the

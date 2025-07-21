@@ -1,7 +1,6 @@
 +++
 title = "Swapping GPS ports"
 weight = 6
-toc_hide = true
 +++
 
 If you're seeing this message via the serial monitor on your Teensy, it means
