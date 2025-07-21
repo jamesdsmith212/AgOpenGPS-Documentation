@@ -1,0 +1,12 @@
+/* Custom override for warning alerts */
+.alert-primary[role="alert"]:has(.alert-heading:contains("Warning")),
+.alert-primary[role="alert"] .alert-heading:contains("Warning") {
+  border-color: #dc3545 !important;
+  color: #dc3545 !important;
+}
+
+/* Fallback for older browsers: target the alert-primary if it contains 'Warning' heading */
+.alert-primary[role="alert"]:has(.alert-heading),
+.alert-primary[role="alert"] .alert-heading {
+  /* No-op unless heading is 'Warning', but this is a fallback */
+} 

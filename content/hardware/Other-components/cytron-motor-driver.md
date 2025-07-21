@@ -48,8 +48,8 @@ avoid this, You have a few options, which can be seen in full on the
 here is the option which involves modifying the cytron to allow the motor to
 freewheel when not in use.
 
-{{% alert title="Warning"%}} Playing with electronics is risky, so do so at your
-own risk. {{% /alert %}}
+{{% alert title="Warning" color="warning" %}} Playing with electronics is risky,
+so do so at your own risk. {{% /alert %}}
 
 #### Free wheel mod v2
 

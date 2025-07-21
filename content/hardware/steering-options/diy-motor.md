@@ -91,8 +91,8 @@ that's a direct connection to cytron. Add a 10A fuse before it.
 When the motor is not used it acts as a resistance. When the cytron is connected
 it acts like a brake. You have a few options.
 
-{{% alert title="Warning"%}} Playing with electronics is risky, so do so at your
-own risk. {{% /alert %}}
+{{% alert title="Warning" color="warning" %}} Playing with electronics is risky,
+so do so at your own risk. {{% /alert %}}
 
 ## Free wheel mod v0
 
