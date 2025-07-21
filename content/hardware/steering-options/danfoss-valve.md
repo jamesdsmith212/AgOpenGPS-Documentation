@@ -5,10 +5,12 @@ weight = 9
 description = "Information on using a Danfoss integrated autosteer valve for steering. Explains wiring, board requirements, jumper settings, and how to identify and connect Danfoss valves."
 +++
 
-The original Danfoss solution was a 3-wire installation.
+## Overview
 
 The danfoss valve was the original integrated autosteer valve. They’ve been used
 by Deere, Agco, CNH, etc.
+
+The original Danfoss solution was a 3-wire installation.
 
 It would have been the easiest way for a tractor manufacturer to add an
 autosteer valve, the valve is built right into the steer motor. No additional
@@ -25,15 +27,21 @@ Saying it again, the LEFT output therefore steers both left and right. Gnd must
 also be supplied of course. You should not power the lock via a relay, but drive
 from the board.
 
+## Schematic
+
 ![image](../../img/danfoss-schematic.png)
 
 ![image](../../img/danfoss-pcb.png)
+
+## Jumper Positioning
 
 To use this configuration, your machine must have this kind of valve, you need
 the chip on the board and you need the jumpers positioned on the board at
 (picture).
 
 ![image](../../img/danfoss-pcb-jumper.png)
+
+## Sample plug guide
 
 Sample Danfoss plug guide, but check with your module!!
 
@@ -46,5 +54,7 @@ Sample Danfoss plug guide, but check with your module!!
 ![image](../../img/danfoss-photo-2.png)
 
 ![image](../../img/danfoss-pinout.png)
+
+## Connectors
 
 You can find the 4-pin connector on the [Connectors](../Connectors) page
