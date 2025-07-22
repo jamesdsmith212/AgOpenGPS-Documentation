@@ -90,8 +90,8 @@ Before you dive into part lists, here's what each main component does.
     [**IMU**](/hardware/Other-components/imu-inertial-measurement-unit) (e.g.
     BNO085).
   - _Dual-antenna builds:_ two
-    [GNSS receivers](/hardware/Other-components/gps-modules-standard-or-micro)
-    provide heading and roll, so no IMU is needed.
+    [GNSS receivers](/hardware/Other-components/gnss-modules) provide heading
+    and roll, so no IMU is needed.
 - **Control PCB** – Acts as a central point that routes power and signals,
   connects sensors, and drives the motor or valve. First-time users would
   typically go for the latest
