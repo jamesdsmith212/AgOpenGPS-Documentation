@@ -1,6 +1,6 @@
 +++
 title = "AIO Ampseal Wiring Harness"
-linkTitle = "Ampseal-Wiring-Harness example"
+linkTitle = "Wiring Harness"
 weight = 3
 +++
 

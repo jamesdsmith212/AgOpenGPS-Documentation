@@ -1,6 +1,6 @@
 +++
 title = "AIO Issues & Fixes"
-weight = 1
+weight = 10
 +++
 
 ## AIO v4.x issues and fixes
