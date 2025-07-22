@@ -43,6 +43,12 @@ right seller, you can even claim the VAT back.
 
 - Panasonic FZ-A1 (android, no use!)
 
+## Configuring
+
+All details on Tablet configuration sit within the software section of the
+documentation. See more info on
+[Tablet Configuration here](/software/02.-Install-AgOpenGPS-and-AgIO).
+
 ## Charger for the tablet:
 
 Most tablets that come with USB-C require charging from 20V and require a 45-65W
