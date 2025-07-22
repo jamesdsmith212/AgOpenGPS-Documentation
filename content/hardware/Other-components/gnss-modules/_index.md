@@ -1,5 +1,5 @@
 +++
-title = "GNSS / GPS Modules"
+title = "GNSS Modules"
 weight = 1
 +++
 

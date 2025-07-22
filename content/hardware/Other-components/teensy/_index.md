@@ -1,6 +1,6 @@
 +++
 title = "Teensy 4.1 (a.k.a the brain of the board)"
-linkTitle = "Teensy 4.1"
+linkTitle = "Teensy"
 weight = 3
 +++
 
