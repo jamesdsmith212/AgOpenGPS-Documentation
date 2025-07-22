@@ -16,7 +16,7 @@ The trace next to the ampseal is touching the direct 12V input, so for 24V
 motors please cut the trace. For valves / 12V motor the outside 12V pin will
 power your cytron directly. (so the label is misleading)
 
-![image](../img/v4-cut-trace.png)
+![image](/img/v4-cut-trace.png)
 
 ![image](../img/v4-label-misleading.png)
 
