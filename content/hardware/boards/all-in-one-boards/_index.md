@@ -1,6 +1,6 @@
 +++
 title = "All-In-One Board guide"
-linkTitle = "All-In-One Board guide"
+linkTitle = "All-In-One Boards"
 weight = 1
 +++
 
