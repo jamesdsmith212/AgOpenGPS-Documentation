@@ -1,12 +1,33 @@
 +++
-title = "AIO v2.x issues and fixes"
+title = "AIO Issues & Fixes"
 weight = 1
 +++
 
-This page will aim to collect all the issues / fixes / improvements one can do
-having a v2.x board.
+## AIO v4.x issues and fixes
 
-## Tougher traces
+This section collects all the known (by the author) issues / fixes /
+improvements one can do on a v4.x board.
+
+**These fixed are for v4.1 STD / Standard only**
+
+**v4.5 boards do NOT need these fixes!!**
+
+The trace next to the ampseal is touching the direct 12V input, so for 24V
+motors please cut the trace. For valves / 12V motor the outside 12V pin will
+power your cytron directly. (so the label is misleading)
+
+![image](../img/v4-cut-trace.png)
+
+![image](../img/v4-label-misleading.png)
+
+![image](../img/v4-cut-trace-location.png)
+
+## AIO v2.x issues and fixes
+
+This section collects all the known (by the author) issues / fixes /
+improvements one can do on a v2.x board.
+
+### Tougher traces
 
 The Input diode can only handle 3A Cytron can do a lot more than the traces
 
@@ -18,7 +39,7 @@ Micro: ![image](../img/v2-traces-micro.png)
 
 Standard: ![image](../img/v2-traces-standard.png)
 
-## Pressure Sensor
+### Pressure Sensor
 
 The AiO's pressure input was meant for 20mA sensors, the above should modify it
 for variable voltage input
@@ -31,11 +52,11 @@ Micro: ![image](../img/v2-pressure-sensor-micro.png)
 
 Standard: ![image](../img/v2-pressure-sensor-standard.png)
 
-## Can termination fix for Micro
+### Can termination fix for Micro
 
 ![image](../img/v2-can-termination-micro.png)
 
-## Free wheel mod fix
+### Free wheel mod fix
 
 Standard:
 
